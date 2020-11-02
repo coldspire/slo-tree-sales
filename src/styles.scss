@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Clear Sans';
+  src: url('./assets/ClearSans-Bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  src: url('./assets/ClearSans-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Clear Sans', sans-serif;
+}
+
+body {
+  font-size: 16pt;
+  margin: 0;
+  padding: 0;
+}
+
