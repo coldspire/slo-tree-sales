@@ -29,4 +29,8 @@ export class TreesComponent implements OnInit {
   ngOnInit(): void {
     this.addMoreTrees(6);
   }
+
+  onAddTrees(): void {
+    this.addMoreTrees(6);
+  }
 }
