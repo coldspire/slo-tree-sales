@@ -1,0 +1,106 @@
+{
+  "treeTypes": {
+    "bases": [
+      "cypress",
+      "juniper",
+      "fir",
+      "spruce",
+      "pine",
+      "cedar",
+      "hemlock",
+      "yew"
+    ],
+    "modifiers": [
+      "Douglas",
+      "Bruce",
+      "Samuel",
+      "majestic",
+      "condescending",
+      "shadowy",
+      "lean and mean",
+      "short and stout",
+      "loosey goosey",
+      "angelic",
+      "demonic",
+      "troublesome",
+      "agreeable",
+      "handsome",
+      "gorgeous",
+      "outrageous",
+      "plain-as-day",
+      "brazen",
+      "bawdy",
+      "beligerent",
+      "towering",
+      "tawdry",
+      "showy",
+      "ostentatious",
+      "vulgar",
+      "bad news",
+      "TODO"
+    ]
+  },
+  "bonuses": {
+    "bases": [
+      "egg",
+      "canary",
+      "bag of gold",
+      "rabbit",
+      "squirrel",
+      "elf",
+      "diamonds",
+      "piano",
+      "photograph of a Bosc pear",
+      "instruction manual",
+      "lock of hair",
+      "gardening gloves",
+      "pinecones",
+      "apples",
+      "TODO"
+    ],
+    "modifiers": [
+      "very clean",
+      "sonorous",
+      "exceptional",
+      "expensive",
+      "exquisite",
+      "deliberate",
+      "sparkling",
+      "grand",
+      "TODO"
+    ]
+  },
+  "caveats": {
+    "bases": [
+      "empty beer bottle",
+      "sack of dirty gravel",
+      "McDonald's burger wrappers",
+      "lidless eye",
+      "shifty-eyed stranger",
+      "jar of teeth",
+      "note that just reads, \"HELP\"",
+      "box of chocolates, but empty",
+      "hubcap",
+      "bunch of screws of different sizes",
+      "underfed bear",
+      "milk pint",
+      "TODO"
+    ],
+    "modifiers": [
+      "stinky",
+      "swampy",
+      "suggestive",
+      "evil",
+      "rude",
+      "disgusting",
+      "flaming",
+      "monstrous",
+      "impersonal",
+      "ugly",
+      "dismissive",
+      "lukewarm",
+      "clammy",
+      "TODO"
+    ]
+  }
+}
