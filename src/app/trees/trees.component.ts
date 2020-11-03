@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { TreeGenService } from '../services/tree-gen.service';
 import { Tree } from './tree/tree.model';
 
 @Component({
@@ -9,22 +11,22 @@ import { Tree } from './tree/tree.model';
 export class TreesComponent implements OnInit {
   trees: Tree[];
 
-  constructor() {
-    this.trees = [
-      {
-        description: 'desc',
-        caveat: 'caveat',
-        bonus: 'bonus',
-        photoUrl: 'https://placeimg.com/250/250/nature',
-      },
-      {
-        description: 'desc',
-        caveat: 'caveat',
-        bonus: 'bonus',
-        photoUrl: 'https://placeimg.com/250/250/nature',
-      },
-    ];
+  constructor(private treeGen: TreeGenService) {
+    this.trees = [];
   }
 
-  ngOnInit(): void {}
+  private addMoreTrees(amount: number): void {
+    this.treeGen
+      .getTrees(amount)
+      .pipe(take(1))
+      .subscribe({
+        next: (freshTrees: Tree[]) => {
+          this.trees.push(...freshTrees);
+        },
+      });
+  }
+
+  ngOnInit(): void {
+    this.addMoreTrees(6);
+  }
 }
