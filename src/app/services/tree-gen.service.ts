@@ -129,8 +129,8 @@ export class TreeGenService {
     return {
       description: this.getTreeDescription(),
       size: this.getTreeSize(),
-      bonus: bonus ? `with ${bonus}` : '',
-      caveat: caveat ? `may include ${caveat}` : '',
+      bonus: bonus ? `comes with: ${bonus}` : '',
+      caveat: caveat ? `may include: ${caveat}` : '',
       photo: this.getRndTreePhoto(),
     };
   }
