@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./trees/trees.module').then((m) => m.TreesModule),
   },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/trees',
+  },
 ];
 
 @NgModule({
