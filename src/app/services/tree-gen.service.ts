@@ -18,9 +18,14 @@ export class TreeGenService {
     return result === 1;
   }
 
-  private getRndIdxInArr(maxNum: number): number {
-    const lastIdx = maxNum - 1;
-    const rndIdx = Math.floor(Math.random() * Math.floor(lastIdx));
+  private getRndIntFromRng(maxNum: number) {
+    const rndIdx = Math.floor(Math.random() * Math.floor(maxNum));
+    return rndIdx;
+  }
+
+  private getRndIdxInArr(arrSize: number): number {
+    const lastIdx = arrSize - 1;
+    const rndIdx = this.getRndIntFromRng(lastIdx);
     return rndIdx;
   }
 
@@ -48,6 +53,16 @@ export class TreeGenService {
 
     const desc = `${this.treeVars.types.modifiers[idxMod]} ${this.treeVars.types.bases[idxBase]}`;
     return desc;
+  }
+  ////
+
+  //// Size stuff
+  private getTreeSize(): string {
+    const feet = this.getRndIntFromRng(30).toString();
+    const inches = this.getRndIntFromRng(11).toString();
+
+    const size = `${feet} feet, ${inches} inches`;
+    return size;
   }
   ////
 
@@ -113,6 +128,7 @@ export class TreeGenService {
 
     return {
       description: this.getTreeDescription(),
+      size: this.getTreeSize(),
       bonus: bonus ? `with ${bonus}` : '',
       caveat: caveat ? `may include ${caveat}` : '',
       photo: this.getRndTreePhoto(),
